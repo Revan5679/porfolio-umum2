@@ -10,19 +10,19 @@
       <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
         <a href="#hero" class="nav-link relative transition-all duration-300 hover:scale-110 hover:text-accent
             after:content-empty after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:-translate-x-1/2
-            hover:after:w-full">Home</a>
+            hover:after:w-full [backface-visibility:hidden]">Home</a>
         <a href="#about" class="nav-link relative transition-all duration-300 hover:scale-110 hover:text-accent
             after:content-empty after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:-translate-x-1/2
-            hover:after:w-full">About</a>
+            hover:after:w-full [backface-visibility:hidden]">About</a>
         <a href="#education" class="nav-link relative transition-all duration-300 hover:scale-110 hover:text-accent
             after:content-empty after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:-translate-x-1/2
-            hover:after:w-full">Education</a>
+            hover:after:w-full [backface-visibility:hidden]">Education</a>
         <a href="#skills" class="nav-link relative transition-all duration-300 hover:scale-110 hover:text-accent
             after:content-empty after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:-translate-x-1/2
-            hover:after:w-full">Skills</a>
+            hover:after:w-full [backface-visibility:hidden]">Skills</a>
         <a href="#contact" class="nav-link relative transition-all duration-300 hover:scale-110 hover:text-accent
             after:content-empty after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:-translate-x-1/2
-            hover:after:w-full">Contact</a>
+            hover:after:w-full [backface-visibility:hidden]">Contact</a>
       </nav>
 
                   <!-- Mobile Menu Button -->

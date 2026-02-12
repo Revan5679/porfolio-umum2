@@ -24,6 +24,9 @@ import Footer from './components/Footer.vue';
 let observer: IntersectionObserver | null = null;
 
 onMounted(() => {
+  const elements = document.querySelectorAll('.reveal-element');
+  let revealedCount = 0;
+
   const observerOptions: IntersectionObserverInit = {
     root: null,
     rootMargin: '0px',
@@ -36,15 +39,20 @@ onMounted(() => {
         if (entry.isIntersecting) {
           entry.target.classList.remove('initial-reveal-state');
           entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active');
-          entry.target.classList.add('initial-reveal-state');
+          
+          // Optimization: Unobserve after reveal and disconnect if all done
+          observer?.unobserve(entry.target);
+          revealedCount++;
+          
+          if (revealedCount === elements.length) {
+            observer?.disconnect();
+          }
         }
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.reveal-element').forEach((el: Element) => {
+  elements.forEach((el: Element) => {
     if (el instanceof HTMLElement) {
       el.classList.add('initial-reveal-state');
       observer?.observe(el);
@@ -58,3 +66,11 @@ onUnmounted(() => {
   }
 });
 </script>
+
+<style>
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

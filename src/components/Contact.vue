@@ -33,7 +33,7 @@
           <div class="space-y-8">
             <div class="flex items-center gap-5 group">
               <div
-                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] group-hover:scale-110 transition-all duration-500 border border-white/5"
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] group-hover:scale-110 transition-all duration-500 border border-white/5 [backface-visibility:hidden]"
               >
                 <Mail :size="24" />
               </div>
@@ -47,7 +47,7 @@
 
             <div class="flex items-center gap-5 group">
               <div
-                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] group-hover:scale-110 transition-all duration-500 border border-white/5"
+                class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] group-hover:scale-110 transition-all duration-500 border border-white/5 [backface-visibility:hidden]"
               >
                 <MapPin :size="24" />
               </div>
@@ -270,6 +270,7 @@ input:focus, textarea:focus {
   padding-top: 20px;
   justify-content: flex-start;
   gap: 15px;
+  contain: layout style;
 }
 
 .wrapper .icon {
@@ -289,6 +290,7 @@ input:focus, textarea:focus {
   color: #38BDF8; /* Default icon color (accent) */
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  backface-visibility: hidden;
 }
 
 .wrapper .icon::after {
@@ -300,12 +302,13 @@ input:focus, textarea:focus {
   background-color: transparent;
   z-index: -1;
   border-radius: 50%;
-  top: 100%;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  top: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .icon:hover:after {
-  top: 0;
+  transform: translateY(0);
 }
 
 .wrapper .icon:hover {
@@ -318,6 +321,7 @@ input:focus, textarea:focus {
 .wrapper .tooltip {
   position: absolute;
   top: 0;
+  transform: translateY(0);
   font-size: 14px;
   background: #fff;
   color: #fff;
@@ -342,7 +346,7 @@ input:focus, textarea:focus {
 }
 
 .wrapper .icon:hover .tooltip {
-  top: -55px;
+  transform: translateY(-55px);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

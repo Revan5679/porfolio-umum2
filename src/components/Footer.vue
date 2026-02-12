@@ -17,7 +17,7 @@
           <button @click="scrollToTop" 
                   class="group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-white transition-all duration-300">
             <span class="tracking-widest uppercase text-[10px]">Back to Top</span>
-            <div class="p-2.5 bg-white/5 border border-white/10 rounded-full group-hover:bg-accent/10 group-hover:border-accent/30 group-hover:text-accent transition-all duration-500 group-hover:animate-bounce shadow-lg">
+            <div class="p-2.5 bg-white/5 border border-white/10 rounded-full group-hover:bg-accent/10 group-hover:border-accent/30 group-hover:text-accent transition-all duration-500 group-hover:animate-bounce shadow-lg [backface-visibility:hidden]">
               <ArrowUp :size="18" />
             </div>
           </button>

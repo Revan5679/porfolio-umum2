@@ -54,16 +54,16 @@
               href="/CV_Alex_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full sm:w-auto px-8 h-[52px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] active:scale-95 transition-all duration-500 premium-transition"
+              class="w-full sm:w-auto px-8 h-[52px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] active:scale-95 transition-all duration-500 premium-transition [backface-visibility:hidden]"
             >
               <FileText
                 :size="20"
-                class="text-accent hover:scale-125 transition-transform duration-500 premium-transition"
+                class="text-accent hover:scale-125 transition-transform duration-500 premium-transition [backface-visibility:hidden]"
               />
             </a>
             <!-- Tooltip -->
             <span
-              class="absolute -top-12 left-1/2 -translate-x-1/2 z-30 scale-0 px-3 py-1.5 rounded-lg border border-accent bg-[#0B1120] text-accent text-xs font-bold shadow-xl transition-all duration-300 origin-bottom group-hover:scale-100 whitespace-nowrap premium-transition"
+              class="absolute -top-12 left-1/2 -translate-x-1/2 z-30 scale-0 px-3 py-1.5 rounded-lg border border-accent bg-[#0B1120] text-accent text-xs font-bold shadow-xl transition-all duration-300 origin-bottom group-hover:scale-100 whitespace-nowrap premium-transition [backface-visibility:hidden]"
             >
               My CV
             </span>
@@ -73,12 +73,12 @@
 
       <!-- Hero Image -->
       <div
-        class="order-1 md:order-2 flex justify-center md:justify-end reveal-element delay-200 floating-animation"
+        class="order-1 md:order-2 flex justify-center md:justify-end reveal-element delay-200 floating-animation [backface-visibility:hidden]"
       >
         <img
           src="/public/poto ai1.1.webp"
           alt="Profile Picture"
-          class="rounded-full w-64 h-64 object-cover border-4 border-accent mx-auto glow-animation shadow-[0_0_20px_rgba(56,189,248,0.5)]"
+          class="rounded-full w-64 h-64 object-cover border-4 border-accent mx-auto glow-animation shadow-[0_0_20px_rgba(56,189,248,0.5)] [backface-visibility:hidden]"
         />
       </div>
     </div>
@@ -202,6 +202,7 @@ onUnmounted(() => {
   font-family: inherit;
   transition: transform 0.2s;
   box-sizing: border-box;
+  backface-visibility: hidden;
 }
 
 .btn-glitch::after {
@@ -330,6 +331,7 @@ onUnmounted(() => {
   justify-content: center;
   box-sizing: border-box;
   letter-spacing: 1px;
+  backface-visibility: hidden;
 }
 
 .slice > .text {

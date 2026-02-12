@@ -22,11 +22,11 @@
           </div>
           
           <!-- Glowing Dot -->
-          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500 [backface-visibility:hidden]"></div>
 
           <!-- Content (Right) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-200">
-            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]">
               <span class="md:hidden block text-accent font-mono text-sm mb-2 font-bold">2021 - 2023</span>
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Master of Interactive Media</h3>
               <p class="text-slate-300 font-medium mb-4">Creative Arts University</p>
@@ -41,7 +41,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Content (Left) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element delay-300">
-             <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500">
+             <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]">
               <span class="md:hidden block text-accent font-mono text-sm mb-2 font-bold">2017 - 2021</span>
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">BS Computer Science</h3>
               <p class="text-slate-300 font-medium mb-4">Global Institute of Technology</p>
@@ -52,7 +52,7 @@
           </div>
           
           <!-- Glowing Dot -->
-          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500 [backface-visibility:hidden]"></div>
 
           <!-- Year Desktop (Right) -->
           <div class="hidden md:block w-5/12 pl-12 reveal-element delay-400">
@@ -64,15 +64,15 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Year Desktop (Left) -->
           <div class="hidden md:block w-5/12 text-right pr-12 reveal-element delay-500">
-            <span class="text-accent font-mono text-lg font-bold tracking-wider">2023 - Present</span>
+            <span class="text-accent font-mono text-lg font-bold tracking-wider">2021 - 2023</span>
           </div>
           
           <!-- Glowing Dot -->
-          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-[#0B1120] transform -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(56,189,248,0.8)] group-hover:scale-150 transition-transform duration-500 [backface-visibility:hidden]"></div>
 
           <!-- Content (Right) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-600">
-            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]">
               <span class="md:hidden block text-accent font-mono text-sm mb-2 font-bold">2023 - Present</span>
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Self-Driven Learning</h3>
               <p class="text-slate-300 font-medium mb-4">Continuous Exploration</p>
