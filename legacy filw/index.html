@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B1120',
+                        secondary: '#F8FAFC',
+                        accent: '#38BDF8',
+                        accentHover: '#0EA5E9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        body {
+            background-color: #0B1120;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        /* Nav Link Hover Animation (Center Out) */
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 4px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #38BDF8;
+            transition: all 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #38BDF8;
+        }
+
+        /* Scroll Reveal Base Styles */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Delays */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Cursor for Typewriter */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: #38BDF8;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1120;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38BDF8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-[#0B1120]/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold tracking-tight text-white">
+                Dev<span class="text-accent">Portfolio</span>.
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#hero" class="nav-link transition-transform hover:scale-105">Home</a>
+                <a href="#about" class="nav-link transition-transform hover:scale-105">About</a>
+                <a href="#education" class="nav-link transition-transform hover:scale-105">Education</a>
+                <a href="#skills" class="nav-link transition-transform hover:scale-105">Skills</a>
+                <a href="#contact" class="nav-link transition-transform hover:scale-105">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-accent transition-colors">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-primary border-b border-slate-800 p-6 flex-col gap-4 shadow-xl">
+            <a href="#hero" class="mobile-link text-slate-300 hover:text-accent py-2 block">Home</a>
+            <a href="#about" class="mobile-link text-slate-300 hover:text-accent py-2 block">About</a>
+            <a href="#education" class="mobile-link text-slate-300 hover:text-accent py-2 block">Education</a>
+            <a href="#skills" class="mobile-link text-slate-300 hover:text-accent py-2 block">Skills</a>
+            <a href="#contact" class="mobile-link text-slate-300 hover:text-accent py-2 block">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-blue-900/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Text -->
+            <div class="order-2 md:order-1 space-y-6">
+                <p class="reveal-element text-accent font-medium tracking-wide">HELLO, I'M ALEX</p>
+                <h1 class="reveal-element delay-100 text-5xl md:text-7xl font-bold leading-tight text-white">
+                    I build <br>
+                    <span id="typewriter" class="text-accent"></span><span class="cursor">|</span>
+                </h1>
+                <p class="reveal-element delay-200 text-slate-400 text-lg max-w-lg leading-relaxed">
+                    A creative Full Stack Developer focused on building accessible, pixel-perfect, and performant web experiences.
+                </p>
+                <div class="reveal-element delay-300 pt-4 flex gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-accent text-primary font-bold rounded hover:bg-accentHover transition-colors duration-300 transform hover:-translate-y-1">
+                        Let's Talk
+                    </a>
+                    <a href="#education" class="px-8 py-3 border border-slate-700 text-secondary rounded hover:border-accent hover:text-accent transition-all duration-300">
+                        My Journey
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="order-1 md:order-2 flex justify-center md:justify-end reveal-element delay-200">
+                <div class="relative w-64 h-64 md:w-96 md:h-96">
+                    <div class="absolute inset-0 border-2 border-accent rounded-full transform rotate-12 opacity-30"></div>
+                    <!-- Placeholder Image from Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Profile" 
+                         class="w-full h-full object-cover rounded-full border-4 border-slate-800 shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-[#0d1526]">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            
+            <!-- Floating Image -->
+            <div class="flex justify-center reveal-element">
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-accent/50 shadow-[0_0_30px_rgba(56,189,248,0.2)] animate-float">
+                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         alt="About Profile" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="space-y-6">
+                <h2 class="reveal-element delay-100 text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded reveal-element delay-100"></div>
+                
+                <p class="reveal-element delay-200 text-slate-300 text-lg leading-relaxed">
+                    I'm a passionate developer based in the digital world. I specialize in crafting clean, user-friendly interfaces that solve real-world problems. My journey started with a curiosity for how things work on the web, and it has evolved into a career obsession with clean code and smooth animations.
+                </p>
+                
+                <p class="reveal-element delay-300 text-slate-400 leading-relaxed">
+                    When I'm not coding, you can find me exploring new technologies, contributing to open-source, or refining my design eye. I believe that great software is a blend of technical excellence and artistic expression.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="reveal-element text-3xl md:text-4xl font-bold text-white mb-16 text-center">Education & Experience</h2>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-12 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="reveal-element relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 bg-primary border-2 border-accent rounded-full"></span>
+                    <span class="text-accent font-mono text-sm mb-2 block">2023 - Present</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white">Senior Frontend Developer</h3>
+                    <h4 class="text-slate-400 mb-4">Tech Solutions Inc.</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Leading the frontend team in rebuilding the core platform using React and Tailwind. Focused on performance optimization and scalable architecture.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="reveal-element delay-100 relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 bg-primary border-2 border-accent rounded-full"></span>
+                    <span class="text-accent font-mono text-sm mb-2 block">2021 - 2023</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white">Full Stack Developer</h3>
+                    <h4 class="text-slate-400 mb-4">Creative Agency</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Developed custom web applications for diverse clients. integrated payment gateways, CMS solutions, and animated interactive experiences.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="reveal-element delay-200 relative pl-8 md:pl-12">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 bg-primary border-2 border-accent rounded-full"></span>
+                    <span class="text-accent font-mono text-sm mb-2 block">2017 - 2021</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white">BS Computer Science</h3>
+                    <h4 class="text-slate-400 mb-4">University of Technology</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Graduated with honors. Specialized in Human-Computer Interaction and Web Technologies.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 bg-[#0d1526]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="reveal-element text-3xl md:text-4xl font-bold text-white mb-4 text-center">Technical Skills</h2>
+            <p class="reveal-element text-slate-400 text-center mb-16 max-w-2xl mx-auto">
+                A constantly evolving toolkit designed to build fast, scalable, and interactive applications.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Category 1 -->
+                <div class="reveal-element p-6 bg-primary border border-slate-800 rounded-xl hover:border-accent/50 transition-colors duration-300 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>React / Next.js</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[95%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>Tailwind CSS</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[90%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>TypeScript</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[85%]"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="reveal-element delay-100 p-6 bg-primary border border-slate-800 rounded-xl hover:border-accent/50 transition-colors duration-300 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>Node.js</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[80%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>PostgreSQL</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[75%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>API Design</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[85%]"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="reveal-element delay-200 p-6 bg-primary border border-slate-800 rounded-xl hover:border-accent/50 transition-colors duration-300 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
+                        <i data-lucide="wrench" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>Git / GitHub</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[90%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>Docker</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[70%]"></div></div>
+                        </li>
+                        <li class="flex items-center justify-between text-slate-400">
+                            <span>Figma</span>
+                            <div class="w-20 h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent w-[80%]"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+             <div class="reveal-element text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-slate-400">Have a project in mind or just want to say hi?</p>
+            </div>
+
+            <div class="reveal-element delay-100 bg-[#0d1526] p-8 md:p-12 rounded-2xl border border-slate-800 shadow-xl">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-slate-300">Name</label>
+                            <input type="text" id="name" class="w-full bg-primary border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="Your name">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-slate-300">Email</label>
+                            <input type="email" id="email" class="w-full bg-primary border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label for="message" class="text-sm font-medium text-slate-300">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-primary border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="button" class="w-full py-4 bg-accent text-primary font-bold rounded-lg hover:bg-accentHover transition-colors duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[#0B1120] border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-4">
+            
+            <div class="flex gap-6 text-slate-400">
+                <a href="#" class="hover:text-accent transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-accent transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-accent transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            </div>
+
+            <p class="text-slate-500 text-sm">
+                &copy; 2024 Alex Developer. Built with simple code and subtle motion.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // 2. Typewriter Effect
+        const words = ["Web Interfaces", "Mobile Apps", "Scalable Systems", "Digital Products"];
+        let i = 0;
+        let timer;
+        const typeWriterElement = document.getElementById('typewriter');
+
+        function typeWriter() {
+            const word = words[i];
+            const text = typeWriterElement.innerHTML;
+            
+            // Typing
+            if (text.length < word.length && !typeWriterElement.classList.contains('deleting')) {
+                typeWriterElement.innerHTML = word.substring(0, text.length + 1);
+                timer = setTimeout(typeWriter, 100);
+            } 
+            // Deleting
+            else if (typeWriterElement.classList.contains('deleting')) {
+                typeWriterElement.innerHTML = word.substring(0, text.length - 1);
+                if (text.length === 0) {
+                    typeWriterElement.classList.remove('deleting');
+                    i = (i + 1) % words.length;
+                    timer = setTimeout(typeWriter, 500);
+                } else {
+                    timer = setTimeout(typeWriter, 50);
+                }
+            } 
+            // Pause before deleting
+            else {
+                typeWriterElement.classList.add('deleting');
+                timer = setTimeout(typeWriter, 2000);
+            }
+        }
+        // Start Typewriter
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeWriter, 1000);
+        });
+
+        // 3. Scroll Reveal Observer (Re-triggerable)
+        // This is crucial: using vanilla JS to toggle class based on visibility
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of element is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    // This line ensures animations trigger again when scrolling back up/down
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-element').forEach((el) => {
+            observer.observe(el);
+        });
+
+    </script>
+</body>
+</html>
