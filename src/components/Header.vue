@@ -4,7 +4,7 @@
   >
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="text-2xl font-bold tracking-tight text-white">
+      <a href="#" class="text-2xl font-bold tracking-tight text-white" aria-label="Go to home section">
         My<span class="text-accent">Portfolio</span>.
       </a>
 
@@ -43,6 +43,8 @@
         id="mobile-menu-btn"
         class="md:hidden text-white hover:text-accent transition-colors relative z-100 p-2"
         @click="toggleMobileMenu"
+        :aria-label="mobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'"
+        :aria-expanded="mobileMenuOpen"
       >
         <svg
           v-if="!mobileMenuOpen"

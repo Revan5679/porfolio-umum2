@@ -20,7 +20,7 @@
         <h1
           class="reveal-element delay-100 text-5xl md:text-7xl font-bold leading-tight text-white"
         >
-          I build <br />
+          I'm a <br />
           <span
             id="typewriter"
             ref="typewriterElement"
@@ -31,19 +31,19 @@
         <p
           class="reveal-element delay-200 text-slate-400 text-md max-w-lg leading-relaxed"
         >
-          A university student eager to broaden their horizons is actively
-          seeking opportunities to gain valuable experience and personal growth.
+          Creative Frontend Developer and Novelist eager to gain valuable experience and personal growth through high-performance, pixel-perfect digital projects.
         </p>
         <div
           class="reveal-element delay-300 mt-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start"
         >
-          <a href="#contact" class="slice w-full sm:w-auto">
+          <a href="#contact" class="slice w-full sm:w-auto" aria-label="Action: Contact me to discuss a project">
             <span class="text">Let's Talk</span>
           </a>
           <a
             href="#education"
             class="btn-glitch w-full sm:w-auto"
             data-text="My Journey"
+            aria-label="Navigation: View my educational journey"
           >
             My Journey
           </a>
@@ -55,11 +55,14 @@
               target="_blank"
               rel="noopener noreferrer"
               class="w-full sm:w-auto px-8 h-[52px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] active:scale-95 transition-all duration-500 premium-transition [backface-visibility:hidden]"
+              aria-label="Action: Download my Curriculum Vitae"
+              title="Download CV"
             >
               <span>My Cv</span>
               <FileText
                 :size="20"
                 class="text-accent hover:scale-125 transition-transform duration-500 premium-transition [backface-visibility:hidden]"
+                aria-hidden="true"
               />
             </a>
             <!-- Tooltip -->
@@ -79,7 +82,7 @@
       >
         <img
           src="/poto ai1.1.webp"
-          alt="Profile Picture"
+          alt="M. Revan Gibran A. - Frontend Developer and Novelist Profile Picture"
           width="256"
           height="256"
           loading="eager"
@@ -101,7 +104,11 @@ const typewriterElement = ref<HTMLElement | null>(null);
 const isMounted = ref(false);
 
 // Typewriter Effect
-const words: string[] = ["Novelist", "Junior Frontend", "Freelancer"];
+const words: string[] = [
+  "Frontend Developer",
+  "Creative Web Developer",
+  "Novelist",
+];
 let i = 0;
 let timer: number | undefined;
 

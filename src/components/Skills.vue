@@ -26,14 +26,14 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Category Card Loop -->
-        <div
+        <article
           v-for="(category, index) in skillsData"
           :key="category.title"
           class="reveal-element p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-accent/50 transition-all duration-500 group [backface-visibility:hidden]"
           :style="{ animationDelay: `${index * 200}ms` }"
         >
           <div
-            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all duration-500 border border-white/5 [backface-visibility:hidden]"
+            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(56,18_248,0.3)] transition-all duration-500 border border-white/5 [backface-visibility:hidden]"
           >
             <component :is="category.icon" :size="24" stroke-width="2" />
           </div>
@@ -56,6 +56,11 @@
               </div>
               <div
                 class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden"
+                role="progressbar"
+                :aria-valuenow="skill.percentage"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                :aria-label="`${skill.name} proficiency: ${skill.percentage}%`"
               >
                 <div
                   class="skill-progress h-full bg-accent shadow-[0_0_10px_rgba(56,189,248,0.5)]"
@@ -64,7 +69,7 @@
               </div>
             </li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -75,7 +80,7 @@ import { Book, Computer, Layout, Server, Wrench } from "lucide-vue-next";
 
 const skillsData = [
   {
-    title: "Frontend/Backend Dev (Hobby)",
+    title: "Frontend Developer",
     icon: Layout,
     skills: [
       { name: "React / Next.js", percentage: 35 },
@@ -97,7 +102,7 @@ const skillsData = [
     ],
   },
   {
-    title: "Author/Writter Story",
+    title: "Author/Writer Story",
     icon: Book,
     skills: [
       { name: "storyline", percentage: 95 },

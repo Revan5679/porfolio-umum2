@@ -39,7 +39,7 @@
       >
         <!-- Card 1: Mindset (Large) -->
 
-        <div
+        <article
           class="group relative md:col-span-2 md:row-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 ease-out reveal-element delay-400 overflow-hidden [backface-visibility:hidden]"
         >
           <div
@@ -71,11 +71,11 @@
               >
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Card 2: Hobbies (Medium) -->
 
-        <div
+        <article
           class="group relative md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.01] transition-all duration-500 ease-out reveal-element delay-500 overflow-hidden [backface-visibility:hidden]"
         >
           <div
@@ -121,11 +121,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Card 3: Current Focus (Small) -->
 
-        <div
+        <article
           class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element delay-600 overflow-hidden [backface-visibility:hidden]"
         >
           <div
@@ -144,11 +144,11 @@
               Exploring the meaning of real life
             </p>
           </div>
-        </div>
+        </article>
 
         <!-- Card 4: Fun Fact (Small) -->
 
-        <div
+        <article
           class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element delay-700 overflow-hidden [backface-visibility:hidden]"
         >
           <div
@@ -165,7 +165,7 @@
 
             <p class="text-sm text-slate-400 leading-tight">100% curiosity</p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>

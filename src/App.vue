@@ -1,11 +1,13 @@
 <template>
   <div class="antialiased scroll-smooth">
     <Header />
-    <Hero />
-    <About />
-    <Education />
-    <Skills />
-    <Contact />
+    <main>
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Contact />
+    </main>
     <Footer />
   </div>
 </template>

@@ -11,6 +11,7 @@
           <a
             href="#"
             class="text-xl font-bold tracking-tighter text-white group"
+            title="Go to home section"
           >
             Anjay<span
               class="text-accent transition-all duration-300 group-hover:text-accentHover"
@@ -28,12 +29,14 @@
           <a
             href="#hero"
             class="back-to-top group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-white transition-all duration-300"
+            aria-label="Scroll back to top of the page"
           >
             <span class="tracking-widest uppercase text-[10px]"
               >Back to Top</span
             >
             <div
               class="p-2.5 bg-white/5 border border-white/10 rounded-full group-hover:bg-accent/10 group-hover:border-accent/30 group-hover:text-accent transition-all duration-500 group-hover:animate-bounce shadow-lg [backface-visibility:hidden]"
+              aria-hidden="true"
             >
               <ArrowUp :size="18" />
             </div>

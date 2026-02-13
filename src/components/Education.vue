@@ -45,7 +45,7 @@
 
           <!-- Content (Right) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-200">
-            <div
+            <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
               <span
@@ -53,15 +53,13 @@
                 >2012 - 2018</span
               >
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
-                My First School
+                Primary School Plosokerep 01
               </h3>
               <p class="text-slate-300 font-medium mb-4">
-                Primary School Plosokerep 01
+                The beginning of my school journey
               </p>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                the beginning of my school journey
-              </p>
-            </div>
+              <p class="text-slate-400 text-sm leading-relaxed">2012 - 2018</p>
+            </article>
           </div>
         </div>
 
@@ -71,7 +69,7 @@
           <div
             class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element delay-300"
           >
-            <div
+            <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
               <span
@@ -79,16 +77,16 @@
                 >2018 - 2021</span
               >
               <h3 class="text-xl md:text-xl font-bold text-white mb-2">
-                advanced school to Junior High School
+                Junior High School 8 Blitar
               </h3>
               <p class="text-slate-300 font-medium mb-4">
-                Junior High School 8 Blitar
+                Advanced school to Junior High School
               </p>
               <p class="text-slate-400 text-sm leading-relaxed">
-                here begins the introduction of material and a very broad
+                Here begins the introduction of material and a very broad
                 friendship environment.
               </p>
-            </div>
+            </article>
           </div>
 
           <!-- Glowing Dot -->
@@ -122,7 +120,7 @@
 
           <!-- Content (Right) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-600">
-            <div
+            <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
               <span
@@ -130,16 +128,16 @@
                 >2021 - 2023</span
               >
               <h3 class="text-xl md:text-xl font-bold text-white mb-2">
-                advanced to Senior High School
+                Senior High School 1 Blitar
               </h3>
               <p class="text-slate-300 font-medium mb-4">
-                Senior High School 1 Blitar
+                Advanced to Senior High School
               </p>
               <p class="text-slate-400 text-sm leading-relaxed">
-                here I only go to school for 2 years, because it is not
+                Here I only go to school for 2 years, because it is not
                 compatible with the school environment.
               </p>
-            </div>
+            </article>
           </div>
         </div>
 
@@ -149,7 +147,7 @@
           <div
             class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element delay-300"
           >
-            <div
+            <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
               <span
@@ -157,16 +155,14 @@
                 >2024</span
               >
               <h3 class="text-xl md:text-xl font-bold text-white mb-2">
-                advanced tou course
-              </h3>
-              <p class="text-slate-300 font-medium mb-4">
                 Microsoft Office Course
-              </p>
+              </h3>
+              <p class="text-slate-300 font-medium mb-4">Advanced to course</p>
               <p class="text-slate-400 text-sm leading-relaxed">
-                here I took a Microsoft Office course for 1 month, and studied
+                Here I took a Microsoft Office course for 1 month, and studied
                 things like Word, Excel, PPT.
               </p>
-            </div>
+            </article>
           </div>
 
           <!-- Glowing Dot -->
@@ -200,7 +196,7 @@
 
           <!-- Content (Right) -->
           <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-600">
-            <div
+            <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
               <span
@@ -208,16 +204,16 @@
                 >2024 - Present</span
               >
               <h3 class="text-xl md:text-xl font-bold text-white mb-2">
-                advanced to University
+                Terbuka Indonesia University
               </h3>
               <p class="text-slate-300 font-medium mb-4">
-                Terbuka University Indonesia
+                Advanced to University
               </p>
               <p class="text-slate-400 text-sm leading-relaxed">
                 I studied here and majored in Information Systems, from 2024
                 until now.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </div>
