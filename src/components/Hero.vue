@@ -5,17 +5,17 @@
   >
     <!-- Background Elements -->
     <div
-      class="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"
+      class="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full md:blur-3xl -z-10"
     ></div>
     <div
-      class="absolute bottom-20 left-0 w-72 h-72 bg-blue-900/10 rounded-full blur-3xl -z-10"
+      class="absolute bottom-20 left-0 w-72 h-72 bg-blue-900/10 rounded-full md:blur-3xl -z-10"
     ></div>
 
     <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
       <!-- Hero Text -->
       <div class="order-2 md:order-1 space-y-6">
         <p class="reveal-element text-accent font-medium tracking-wide">
-          HELLO, I'M ALEX
+          HELLO, I'M M. REVAN GIBRAN A.
         </p>
         <h1
           class="reveal-element delay-100 text-5xl md:text-7xl font-bold leading-tight text-white"
@@ -29,10 +29,10 @@
           ><span class="cursor">|</span>
         </h1>
         <p
-          class="reveal-element delay-200 text-slate-400 text-lg max-w-lg leading-relaxed"
+          class="reveal-element delay-200 text-slate-400 text-md max-w-lg leading-relaxed"
         >
-          A creative Full Stack Developer focused on building accessible,
-          pixel-perfect, and performant web experiences.
+          A university student eager to broaden their horizons is actively
+          seeking opportunities to gain valuable experience and personal growth.
         </p>
         <div
           class="reveal-element delay-300 mt-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start"
@@ -56,6 +56,7 @@
               rel="noopener noreferrer"
               class="w-full sm:w-auto px-8 h-[52px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] active:scale-95 transition-all duration-500 premium-transition [backface-visibility:hidden]"
             >
+              <span>My Cv</span>
               <FileText
                 :size="20"
                 class="text-accent hover:scale-125 transition-transform duration-500 premium-transition [backface-visibility:hidden]"
@@ -73,12 +74,19 @@
 
       <!-- Hero Image -->
       <div
-        class="order-1 md:order-2 flex justify-center md:justify-end reveal-element delay-200 floating-animation [backface-visibility:hidden]"
+        class="order-1 md:order-2 flex justify-center md:justify-end [backface-visibility:hidden]"
+        :class="{ 'floating-animation': isMounted }"
       >
         <img
-          src="/public/poto ai1.1.webp"
+          src="/poto ai1.1.webp"
           alt="Profile Picture"
-          class="rounded-full w-64 h-64 object-cover border-4 border-accent mx-auto glow-animation shadow-[0_0_20px_rgba(56,189,248,0.5)] [backface-visibility:hidden]"
+          width="256"
+          height="256"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="rounded-full w-64 h-64 object-cover border-4 border-accent mx-auto shadow-[0_0_20px_rgba(56,189,248,0.5)] [backface-visibility:hidden]"
+          :class="{ 'glow-animation': isMounted }"
         />
       </div>
     </div>
@@ -90,9 +98,10 @@ import { onMounted, ref, onUnmounted } from "vue";
 import { FileText } from "lucide-vue-next";
 
 const typewriterElement = ref<HTMLElement | null>(null);
+const isMounted = ref(false);
 
 // Typewriter Effect
-const words: string[] = ["Fullstack Developer", "UI/UX Designer", "Freelancer"];
+const words: string[] = ["Novelist", "Junior Frontend", "Freelancer"];
 let i = 0;
 let timer: number | undefined;
 
@@ -135,6 +144,7 @@ const typeWriter = () => {
 };
 
 onMounted(() => {
+  isMounted.value = true;
   timer = setTimeout(typeWriter, 1000) as unknown as number;
 });
 

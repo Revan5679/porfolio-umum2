@@ -71,25 +71,40 @@
 </template>
 
 <script setup lang="ts">
-import { Layout, Server, Wrench } from "lucide-vue-next";
+import { Book, Computer, Layout, Server, Wrench } from "lucide-vue-next";
 
 const skillsData = [
   {
-    title: "Frontend",
+    title: "Frontend/Backend Dev (Hobby)",
     icon: Layout,
     skills: [
-      { name: "React / Next.js", percentage: 95 },
-      { name: "Tailwind CSS", percentage: 90 },
-      { name: "TypeScript", percentage: 85 },
+      { name: "React / Next.js", percentage: 35 },
+      { name: "Tailwind CSS/Uno CSS", percentage: 70 },
+      { name: "TypeScript", percentage: 45 },
+      { name: "Astro", percentage: 75 },
+      { name: "Vite + Vue 3", percentage: 65 },
+      { name: "Laravel", percentage: 40 },
+      { name: "MySQL (database)", percentage: 35 },
     ],
   },
   {
-    title: "Backend",
-    icon: Server,
+    title: "Microsoft Office",
+    icon: Computer,
     skills: [
-      { name: "Node.js", percentage: 80 },
-      { name: "PostgreSQL", percentage: 75 },
-      { name: "API Design", percentage: 85 },
+      { name: "Microsoft Word", percentage: 90 },
+      { name: "Microsoft Excel", percentage: 45 },
+      { name: "Microsoft PPT", percentage: 65 },
+    ],
+  },
+  {
+    title: "Author/Writter Story",
+    icon: Book,
+    skills: [
+      { name: "storyline", percentage: 95 },
+      { name: "character development", percentage: 85 },
+      { name: "World Building", percentage: 75 },
+      { name: "Pacing", percentage: 84 },
+      { name: "Tone", percentage: 94 },
     ],
   },
   {
@@ -97,8 +112,8 @@ const skillsData = [
     icon: Wrench,
     skills: [
       { name: "Git / GitHub", percentage: 90 },
-      { name: "Docker", percentage: 70 },
-      { name: "Figma", percentage: 80 },
+      { name: "Microsoft Office", percentage: 70 },
+      { name: "Visual Studio Code", percentage: 60 },
     ],
   },
 ];
