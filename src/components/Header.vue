@@ -1,8 +1,18 @@
 <template>
   <header
-    class="fixed top-0 w-full z-50 bg-[#0B1120]/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300"
+    :class="[
+      'fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out',
+      isScrolled
+        ? 'bg-black/20 backdrop-blur-md shadow-lg'
+        : 'bg-transparent'
+    ]"
   >
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div
+      :class="[
+        'max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ease-in-out',
+        isScrolled ? 'h-16' : 'h-20'
+      ]"
+    >
       <!-- Logo -->
       <a href="#" class="text-2xl font-bold tracking-tight text-white" aria-label="Go to home section">
         My<span class="text-accent">Portfolio</span>.
@@ -86,8 +96,11 @@
 
     <div
       id="mobile-menu"
-      :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
-      class="absolute top-20 left-0 w-full bg-primary border-b border-slate-800 p-6 flex-col gap-4 shadow-xl"
+      :class="[
+        mobileMenuOpen ? 'flex' : 'hidden',
+        isScrolled ? 'top-16' : 'top-20'
+      ]"
+      class="absolute left-0 w-full bg-[#0B1120]/95 border-b border-slate-800 p-6 flex-col gap-4 shadow-xl transition-all duration-300"
     >
       <a
         href="#hero"
@@ -128,11 +141,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const mobileMenuOpen = ref(false);
+const isScrolled = ref(false);
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
 };
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
