@@ -180,11 +180,22 @@
               class="absolute -top-24 -right-24 w-48 h-48 bg-accent/10 rounded-full blur-3xl group-hover/card:bg-accent/20 transition-colors duration-700"
             ></div>
 
-            <form
-              @submit.prevent="handleSubmit"
-              class="space-y-8 relative z-10"
-            >
-              <div class="grid md:grid-cols-2 gap-8">
+              <form
+                @submit.prevent="handleSubmit"
+                class="space-y-8 relative z-10"
+              >
+                <!-- Honeypot Field (Bot Prevention) -->
+                <div class="hidden" aria-hidden="true">
+                  <input
+                    v-model="formData.honeypot"
+                    type="text"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-2 group">
                   <label
                     for="name"
@@ -287,13 +298,24 @@ const formData = reactive({
   name: "",
   email: "",
   message: "",
+  honeypot: "",
 });
 
 const isSubmitting = ref(false);
 const showSuccess = ref(false);
 
 const handleSubmit = async () => {
+  // Bot prevention: Honeypot check
+  if (formData.honeypot) {
+    return;
+  }
+
   isSubmitting.value = true;
+
+  // Simple sanitization: strip HTML tags
+  const sanitize = (text: string) => text.replace(/<[^>]*>?/gm, "");
+  const sanitizedName = sanitize(formData.name);
+  const sanitizedMessage = sanitize(formData.message);
 
   try {
     // GANTI ID DI BAWAH INI DENGAN PUNYAMU
@@ -301,11 +323,11 @@ const handleSubmit = async () => {
       "service_5hi2bsn",
       "template_setowks",
       {
-        from_name: formData.name, // Memetakan ke {{from_name}} di dashboard
-        name: formData.name, // Memetakan ke {{name}} di dashboard
+        from_name: sanitizedName, // Memetakan ke {{from_name}} di dashboard
+        name: sanitizedName, // Memetakan ke {{name}} di dashboard
         reply_to: formData.email, // Memetakan ke {{reply_to}} di dashboard
         email: formData.email, // Memetakan ke {{email}} di dashboard
-        message: formData.message, // Memetakan ke {{message}} di dashboard
+        message: sanitizedMessage, // Memetakan ke {{message}} di dashboard
       },
       "lunoHlpjaMYgHBNmU",
     );
