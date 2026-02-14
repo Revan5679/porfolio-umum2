@@ -31,12 +31,18 @@
         <p
           class="reveal-element delay-200 text-slate-400 text-md max-w-lg leading-relaxed"
         >
-          Creative Frontend Developer and Novelist eager to gain valuable experience and personal growth through high-performance, pixel-perfect digital projects.
+          Creative Frontend Developer and Novelist eager to gain valuable
+          experience and personal growth through high-performance, pixel-perfect
+          digital projects.
         </p>
         <div
           class="reveal-element delay-300 mt-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start"
         >
-          <a href="#contact" class="slice w-full sm:w-auto" aria-label="Action: Contact me to discuss a project">
+          <a
+            href="#contact"
+            class="slice w-full sm:w-auto"
+            aria-label="Action: Contact me to discuss a project"
+          >
             <span class="text">Let's Talk</span>
           </a>
           <a
@@ -51,7 +57,7 @@
           <!-- Premium Download CV Button with Tooltip -->
           <div class="group relative w-full sm:w-auto">
             <a
-              href="/CV_Alex_Developer.pdf"
+              href="/CV ku1.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full sm:w-auto px-8 h-[52px] bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] active:scale-95 transition-all duration-500 premium-transition [backface-visibility:hidden]"
