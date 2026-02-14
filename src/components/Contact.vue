@@ -68,7 +68,7 @@
 
           <div class="pt-6">
             <p
-              class="text-sm text-slate-500 mb-2 font-bold uppercase tracking-[0.2em]"
+              class="text-sm text-slate-400 mb-2 font-bold uppercase tracking-[0.2em]"
             >
               Connect with me
             </p>
@@ -207,7 +207,7 @@
                     type="text"
                     id="name"
                     required
-                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-600 shadow-inner"
+                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-400 shadow-inner"
                     placeholder="Your name"
                   />
                 </div>
@@ -222,7 +222,7 @@
                     type="email"
                     id="email"
                     required
-                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-600 shadow-inner"
+                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-400 shadow-inner"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -238,7 +238,7 @@
                   id="message"
                   rows="5"
                   required
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-600 resize-none shadow-inner"
+                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 focus:bg-white/10 transition-all duration-300 placeholder:text-slate-400 resize-none shadow-inner"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>

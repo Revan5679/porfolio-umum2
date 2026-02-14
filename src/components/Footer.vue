@@ -18,7 +18,7 @@
               >.Code</span
             >
           </a>
-          <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
+          <p class="text-slate-400 text-sm max-w-xs leading-relaxed">
             Crafting high-performance digital experiences with precision and
             subtle motion.
           </p>
@@ -46,7 +46,7 @@
 
       <!-- Bottom Bar: Copyright -->
       <div class="mt-12 pt-8 border-t border-white/5 text-center">
-        <p class="text-slate-500 text-[13px] tracking-widest uppercase">
+        <p class="text-slate-400 text-[13px] tracking-widest uppercase">
           &copy; {{ new Date().getFullYear() }} Anjay Developer.
         </p>
       </div>
