@@ -9,7 +9,7 @@
     ></div>
 
     <div class="max-w-7xl mx-auto">
-      <div class="reveal-element text-center mb-16">
+      <div class="reveal-element initial-reveal-state text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
           Get In Touch
         </h2>
@@ -22,7 +22,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
         <!-- Left Column: Info -->
-        <div class="md:col-span-5 space-y-10 reveal-element reveal-left">
+        <div class="md:col-span-5 space-y-10 reveal-element initial-reveal-state reveal-left">
           <div>
             <h3 class="text-2xl font-bold text-white mb-6">Let's Talk</h3>
             <p class="text-slate-400 leading-relaxed">
@@ -171,7 +171,7 @@
         </div>
 
         <!-- Right Column: Form -->
-        <div class="md:col-span-7 reveal-element reveal-right delay-300">
+        <div class="md:col-span-7 reveal-element initial-reveal-state reveal-right delay-300">
           <div
             class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden group/card"
           >
@@ -243,7 +243,7 @@
                 ></textarea>
               </div>
 
-              <div class="space-y-4">
+              <div class="space-y-4 min-h-[80px]">
                 <button
                   type="submit"
                   :disabled="isSubmitting"
@@ -271,7 +271,7 @@
                   leave-to-class="transform translate-y-4 opacity-0"
                 >
                   <div
-                    v-if="showSuccess"
+                    v-show="showSuccess"
                     class="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center gap-3 text-emerald-400"
                   >
                     <CheckCircle2 :size="20" />

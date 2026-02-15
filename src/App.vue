@@ -127,7 +127,6 @@ onMounted(() => {
 
   elements.forEach((el: Element) => {
     if (el instanceof HTMLElement) {
-      el.classList.add('initial-reveal-state');
       observer?.observe(el);
     }
   });

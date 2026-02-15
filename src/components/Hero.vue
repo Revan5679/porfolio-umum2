@@ -14,11 +14,11 @@
     <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
       <!-- Hero Text -->
       <div class="order-2 md:order-1 space-y-6">
-        <p class="reveal-element text-accent font-medium tracking-wide">
+        <p class="reveal-element initial-reveal-state text-accent font-medium tracking-wide">
           HELLO, I'M M. REVAN GIBRAN A.
         </p>
         <h1
-          class="reveal-element delay-100 text-5xl md:text-7xl font-bold leading-tight text-white"
+          class="reveal-element initial-reveal-state delay-100 text-5xl md:text-7xl font-bold leading-tight text-white min-h-[160px] md:min-h-[200px]"
         >
           I'm a <br />
           <span
@@ -29,14 +29,14 @@
           ><span class="cursor">|</span>
         </h1>
         <p
-          class="reveal-element delay-200 text-slate-400 text-md max-w-lg leading-relaxed"
+          class="reveal-element initial-reveal-state delay-200 text-slate-400 text-md max-w-lg leading-relaxed"
         >
           Creative Frontend Developer and Novelist eager to gain valuable
           experience and personal growth through high-performance, pixel-perfect
           digital projects.
         </p>
         <div
-          class="reveal-element delay-300 mt-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start"
+          class="reveal-element initial-reveal-state delay-300 mt-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start"
         >
           <a
             href="#contact"
@@ -86,17 +86,19 @@
         class="order-1 md:order-2 flex justify-center md:justify-end [backface-visibility:hidden]"
         :class="{ 'floating-animation': isMounted }"
       >
-        <img
-          src="/poto ai1.1.webp"
-          alt="M. Revan Gibran A. - Frontend Developer and Novelist Profile Picture"
-          width="256"
-          height="256"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="rounded-full w-64 h-64 object-cover border-4 border-accent mx-auto shadow-[0_0_20px_rgba(56,189,248,0.5)] [backface-visibility:hidden]"
-          :class="{ 'glow-animation': isMounted }"
-        />
+        <div class="relative w-64 h-64 aspect-square">
+          <img
+            src="/poto ai1.1.webp"
+            alt="M. Revan Gibran A. - Frontend Developer and Novelist Profile Picture"
+            width="256"
+            height="256"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="rounded-full w-256px h-256px object-cover border-4 border-accent mx-auto shadow-[0_0_20px_rgba(56,189,248,0.5)] [backface-visibility:hidden]"
+            :class="{ 'glow-animation': isMounted }"
+          />
+        </div>
       </div>
     </div>
   </section>

@@ -11,13 +11,13 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <h2
-          class="reveal-element text-3xl md:text-4xl font-bold text-white mb-4"
+          class="reveal-element initial-reveal-state text-3xl md:text-4xl font-bold text-white mb-4"
         >
           Technical Skills
         </h2>
-        <div class="w-16 h-1 bg-accent mx-auto rounded reveal-element"></div>
+        <div class="w-16 h-1 bg-accent mx-auto rounded reveal-element initial-reveal-state"></div>
         <p
-          class="reveal-element delay-100 text-slate-400 mt-6 max-w-2xl mx-auto"
+          class="reveal-element initial-reveal-state delay-100 text-slate-400 mt-6 max-w-2xl mx-auto"
         >
           A constantly evolving toolkit designed to build fast, scalable, and
           interactive applications.
@@ -29,7 +29,7 @@
         <article
           v-for="(category, index) in skillsData"
           :key="category.title"
-          class="reveal-element p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-accent/50 transition-all duration-500 group [backface-visibility:hidden]"
+          class="reveal-element initial-reveal-state p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-accent/50 transition-all duration-500 group [backface-visibility:hidden]"
           :style="{ animationDelay: `${index * 200}ms` }"
         >
           <div

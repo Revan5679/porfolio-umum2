@@ -4,16 +4,16 @@
       <!-- Content -->
       <div class="space-y-6">
         <h2
-          class="reveal-element delay-100 text-3xl md:text-4xl font-bold text-white"
+          class="reveal-element initial-reveal-state delay-100 text-3xl md:text-4xl font-bold text-white"
         >
           About Me
         </h2>
         <div
-          class="w-16 h-1 bg-accent mx-auto rounded reveal-element delay-100"
+          class="w-16 h-1 bg-accent mx-auto rounded reveal-element initial-reveal-state delay-100"
         ></div>
 
         <p
-          class="reveal-element delay-200 text-slate-300 text-lg leading-relaxed"
+          class="reveal-element initial-reveal-state delay-200 text-slate-300 text-lg leading-relaxed"
         >
           Currently, I work as a freelance novel writer, dedicating my time and
           creativity to crafting stories that resonate with readers. While this
@@ -21,7 +21,7 @@
           student.
         </p>
 
-        <p class="reveal-element delay-300 text-slate-400 leading-relaxed">
+        <p class="reveal-element initial-reveal-state delay-300 text-slate-400 leading-relaxed">
           it also comes with its challenges, such as inconsistent income and the
           uncertainty of project availability. As much as I enjoy exploring my
           passion for writing, I am now seeking a more stable, permanent
@@ -40,7 +40,7 @@
         <!-- Card 1: Mindset (Large) -->
 
         <article
-          class="group relative md:col-span-2 md:row-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 ease-out reveal-element delay-400 overflow-hidden [backface-visibility:hidden]"
+          class="group relative md:col-span-2 md:row-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 ease-out reveal-element initial-reveal-state delay-400 overflow-hidden [backface-visibility:hidden]"
         >
           <div
             class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -76,7 +76,7 @@
         <!-- Card 2: Hobbies (Medium) -->
 
         <article
-          class="group relative md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.01] transition-all duration-500 ease-out reveal-element delay-500 overflow-hidden [backface-visibility:hidden]"
+          class="group relative md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.01] transition-all duration-500 ease-out reveal-element initial-reveal-state delay-500 overflow-hidden [backface-visibility:hidden]"
         >
           <div
             class="absolute inset-0 bg-gradient-to-tr from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -126,7 +126,7 @@
         <!-- Card 3: Current Focus (Small) -->
 
         <article
-          class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element delay-600 overflow-hidden [backface-visibility:hidden]"
+          class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element initial-reveal-state delay-600 overflow-hidden [backface-visibility:hidden]"
         >
           <div
             class="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -149,7 +149,7 @@
         <!-- Card 4: Fun Fact (Small) -->
 
         <article
-          class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element delay-700 overflow-hidden [backface-visibility:hidden]"
+          class="group relative md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-accent/50 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out reveal-element initial-reveal-state delay-700 overflow-hidden [backface-visibility:hidden]"
         >
           <div
             class="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"

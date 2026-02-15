@@ -14,11 +14,11 @@
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-20">
         <h2
-          class="reveal-element text-3xl md:text-4xl font-bold text-white mb-4"
+          class="reveal-element initial-reveal-state text-3xl md:text-4xl font-bold text-white mb-4"
         >
           Education
         </h2>
-        <div class="w-16 h-1 bg-accent mx-auto rounded reveal-element"></div>
+        <div class="w-16 h-1 bg-accent mx-auto rounded reveal-element initial-reveal-state"></div>
       </div>
 
       <div class="relative">
@@ -31,7 +31,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Year Desktop (Left) -->
           <div
-            class="hidden md:block w-5/12 text-right pr-12 reveal-element delay-100"
+            class="hidden md:block w-5/12 text-right pr-12 reveal-element initial-reveal-state delay-100"
           >
             <span class="text-accent font-mono text-lg font-bold tracking-wider"
               >2012 - 2018</span
@@ -44,7 +44,7 @@
           ></div>
 
           <!-- Content (Right) -->
-          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-200">
+          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element initial-reveal-state delay-200">
             <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
@@ -67,7 +67,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Content (Left) -->
           <div
-            class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element delay-300"
+            class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element initial-reveal-state delay-300"
           >
             <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
@@ -95,7 +95,7 @@
           ></div>
 
           <!-- Year Desktop (Right) -->
-          <div class="hidden md:block w-5/12 pl-12 reveal-element delay-400">
+          <div class="hidden md:block w-5/12 pl-12 reveal-element initial-reveal-state delay-400">
             <span class="text-accent font-mono text-lg font-bold tracking-wider"
               >2018 - 2021</span
             >
@@ -106,7 +106,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Year Desktop (Left) -->
           <div
-            class="hidden md:block w-5/12 text-right pr-12 reveal-element delay-500"
+            class="hidden md:block w-5/12 text-right pr-12 reveal-element initial-reveal-state delay-500"
           >
             <span class="text-accent font-mono text-lg font-bold tracking-wider"
               >2021 - 2023</span
@@ -119,7 +119,7 @@
           ></div>
 
           <!-- Content (Right) -->
-          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-600">
+          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element initial-reveal-state delay-600">
             <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
@@ -145,7 +145,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Content (Left) -->
           <div
-            class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element delay-300"
+            class="w-full md:w-5/12 pl-10 md:pl-0 md:pr-12 reveal-element initial-reveal-state delay-300"
           >
             <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:text-right hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
@@ -171,7 +171,7 @@
           ></div>
 
           <!-- Year Desktop (Right) -->
-          <div class="hidden md:block w-5/12 pl-12 reveal-element delay-400">
+          <div class="hidden md:block w-5/12 pl-12 reveal-element initial-reveal-state delay-400">
             <span class="text-accent font-mono text-lg font-bold tracking-wider"
               >2024</span
             >
@@ -182,7 +182,7 @@
         <div class="relative flex items-center mb-16 md:justify-between group">
           <!-- Year Desktop (Left) -->
           <div
-            class="hidden md:block w-5/12 text-right pr-12 reveal-element delay-500"
+            class="hidden md:block w-5/12 text-right pr-12 reveal-element initial-reveal-state delay-500"
           >
             <span class="text-accent font-mono text-lg font-bold tracking-wider"
               >2024 - Present</span
@@ -195,7 +195,7 @@
           ></div>
 
           <!-- Content (Right) -->
-          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element delay-600">
+          <div class="w-full md:w-5/12 pl-10 md:pl-12 reveal-element initial-reveal-state delay-600">
             <article
               class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-accent/50 hover:-translate-y-1 transition-all duration-500 [backface-visibility:hidden]"
             >
